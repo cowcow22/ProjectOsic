@@ -4,7 +4,7 @@ export const initialState = {
   token: null,
 };
 
-const reduce = (state, action) => {
+const reducer = (state, action) => {
   switch (action.type) {
     case reducerCases.SET_TOKEN: {
       return {
@@ -17,4 +17,4 @@ const reduce = (state, action) => {
   }
 };
 
-export default reduce;
+export default reducer;

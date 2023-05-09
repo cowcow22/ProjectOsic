@@ -1,6 +1,6 @@
 import React from "react";
 import "./Login.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function Login() {
   // let navigate = useNavigate();
@@ -9,23 +9,22 @@ function Login() {
   //   navigate(path);
   // };
 
-  const handleClick = () => {
+  const handleClick = async () => {
     const clientId = "09b22affe3044deea517a4b139fb1391";
-    const redirectURL = "http://localhost:3000/";
-    const APIURL = "https://account.spotify.com/authorize";
+    const redirectUrl = "http://localhost:3000/";
+    const apiUrl = "https://accounts.spotify.com/authorize";
     const scope = [
       "user-read-private",
       "user-read-email",
-      "user-read-playback-state",
       "user-modify-playback-state",
-      "suser-read-currently-playing",
-      "user-read-playback-position",
+      "user-read-playback-state",
+      "user-read-currently-playing",
       "user-read-recently-played",
       "user-top-read",
     ];
-    window.location.href = `${APIURL}?client_id = ${clientId}&redirect_uri = ${redirectURL}&scope = ${scope.join(
+    window.location.href = `${apiUrl}?client_id=${clientId}&redirect_uri=${redirectUrl}&scope=${scope.join(
       " "
-    )}&response_type = token&show_daialog = true`;
+    )}&response_type=token&dialog_show=true`;
   };
 
   return (
@@ -43,18 +42,7 @@ function Login() {
           <h2>
             Sign In With <a className="spotifyColor">Spotify</a> Account
           </h2>
-          {/* <form className="inputBox">
-            <input className="data" type="text" placeholder="Username" />
-          </form>
-          <form className="inputBox">
-            <input className="data" type="password" placeholder="Password" />
-          </form> */}
           <button onClick={handleClick}>Login</button>
-
-          <div className="group">
-            <a href="#">Forget Password</a>
-            <a href="3">Sign Up</a>
-          </div>
         </div>
       </div>
     </div>

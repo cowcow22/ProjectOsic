@@ -1,6 +1,7 @@
 import React from "react";
 import "./Osic.css";
 import OsicLeftMenu from "./OsicLeftMenu.jsx";
+import OsicMiddle from "./OsicMiddle";
 
 function Osic() {
   return (
@@ -11,6 +12,7 @@ function Osic() {
         alt="background"
       />
       <OsicLeftMenu />
+      <OsicMiddle />
     </div>
   );
 }

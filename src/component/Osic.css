@@ -3,6 +3,8 @@
   padding-right: 0px;
   margin-left: 0px;
   margin-right: 0px;
+  display: flex;
+  flex-direction: row;
 }
 
 .background {
