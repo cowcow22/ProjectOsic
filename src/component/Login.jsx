@@ -32,7 +32,7 @@ function Login() {
       <div className="bungkus">
         <img
           className="background"
-          src="https://wallpaperaccess.com/full/880901.png"
+          src="https://pbs.twimg.com/media/DsdWY5iXoAEyfjd?format=jpg&name=large"
           alt="background"
         />
         <div className="login">

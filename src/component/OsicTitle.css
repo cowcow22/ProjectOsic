@@ -1,0 +1,11 @@
+.osicTitle {
+  width: 100%;
+  max-height: 100px;
+}
+
+.osicTitle h1 {
+  color: #a75d5d;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
