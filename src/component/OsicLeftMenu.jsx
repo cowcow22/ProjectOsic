@@ -1,8 +1,8 @@
 import React from "react";
 import "./OsicLeftMenu.css";
-import Menu from "./Menu.jsx";
-import listmenu from "./ListMenu";
+import Playlist from "./playlist";
 import { BiSearchAlt } from "react-icons/bi";
+import { MdOutlinePlaylistAddCircle } from "react-icons/md";
 
 function OsicLeftMenu() {
   return (
@@ -26,7 +26,16 @@ function OsicLeftMenu() {
           <BiSearchAlt />
         </div>
       </div>
-      <Menu title={"Menu"} list={listmenu} />
+      <div className="containerMenu mr-0">
+        <p className="menu">Menu</p>
+        <ul>
+          <MdOutlinePlaylistAddCircle />
+          <p className="playlistMenu">Playlist</p>
+          <li>
+            <Playlist />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

@@ -20,10 +20,12 @@ function App() {
   return (
     <div>
       {token ? <Osic /> : <Login />}
-      {/* <Routes>
+      {/* 
+    <Routes>
         <Route exact path="/" Component={Login}></Route>
         <Route exact path="/osic" Component={Osic}></Route>
-      </Routes> */}
+      </Routes>
+      */}
     </div>
   );
 }

@@ -3,12 +3,6 @@ import "./Login.css";
 // import { useNavigate } from "react-router-dom";
 
 function Login() {
-  // let navigate = useNavigate();
-  // const routeChange = () => {
-  //   let path = `osic`;
-  //   navigate(path);
-  // };
-
   const handleClick = async () => {
     const clientId = "09b22affe3044deea517a4b139fb1391";
     const redirectUrl = "http://localhost:3000/";

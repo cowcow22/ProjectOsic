@@ -15,9 +15,13 @@ function Osic() {
       />
       <OsicLeftMenu />
       <div className="OsicMiddle">
-        <OsicTitle />
-        <OsicMain />
-        <OsicPlayer />
+        <div className="osicTitle">
+          <OsicTitle />
+        </div>
+        <div className="OsicMainBody">
+          <OsicMain />
+          <OsicPlayer />
+        </div>
       </div>
     </div>
   );

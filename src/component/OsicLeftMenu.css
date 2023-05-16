@@ -70,21 +70,48 @@
   margin: 15px 0;
 }
 
-.containerMenu .title {
+.containerMenu .menu {
   color: #f9a24a;
   font-weight: bold;
   margin-bottom: 5px;
+}
+
+.containerMenu .playlistMenu {
+  color: #f9a24a;
+  width: 100px;
+  margin-right: 0;
+  margin-bottom: 10px;
 }
 
 .containerMenu ul {
   list-style: none;
   padding: 0;
   margin-left: 10px;
+  max-height: 30vh;
 }
 
-.containerMenu ul li a {
+.containerMenu ul li {
+  overflow: auto;
   text-decoration: none;
   color: #ffaf7d;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  margin-bottom: 5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  &::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+}
+
+.containerMenu ul li:hover {
+  color: white;
+}
+
+.containerMenu ul li::-webkit-scrollbar-thumb {
+  background: #7b4632;
+  border-radius: 10px;
 }
 /* Menu End */
 /* Left Menu End */
