@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useStateProvider } from "../utilities/StateProvider";
 import { reducerCases } from "../utilities/constant";
-// import "./OsicLeftMenu.css";
 
 function Playlist() {
   const [{ token, playlistsMusic }, dispatch] = useStateProvider();
@@ -21,16 +20,24 @@ function Playlist() {
       const playlistsMusic = items.map(({ name, id }) => {
         return { name, id };
       });
-      console.log({ playlistsMusic });
+      console.log(playlistsMusic);
       dispatch({ type: reducerCases.SET_PLAYLISTS, playlistsMusic });
     };
     playlistData();
   }, [token, dispatch]);
+
+  const changeCurrentPlaylist = (playlistSelectId) => {
+    dispatch({ type: reducerCases.SET_PLAYLIST_ID, playlistSelectId });
+  };
   return (
     <div>
       <ul>
         {playlistsMusic.map(({ name, id }) => {
-          return <li key={id}>{name}</li>;
+          return (
+            <li key={id} onClick={() => changeCurrentPlaylist(id)}>
+              {name}
+            </li>
+          );
         })}
       </ul>
     </div>

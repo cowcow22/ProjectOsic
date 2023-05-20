@@ -68,6 +68,8 @@
 /* Menu Start */
 .containerMenu {
   margin: 15px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .containerMenu .menu {
@@ -76,11 +78,23 @@
   margin-bottom: 5px;
 }
 
+.containerMenu .bebas {
+  display: flex;
+  flex-direction: row;
+}
+
 .containerMenu .playlistMenu {
   color: #f9a24a;
   width: 100px;
   margin-right: 0;
   margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.containerMenu svg {
+  color: #f9a24a;
+  height: 20px;
+  width: 20px;
 }
 
 .containerMenu ul {

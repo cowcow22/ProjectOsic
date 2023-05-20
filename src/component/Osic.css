@@ -13,11 +13,14 @@
   backdrop-filter: blur(5px);
   width: 100%;
   min-height: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 .OsicMainBody {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   max-height: 100%;
 }
 

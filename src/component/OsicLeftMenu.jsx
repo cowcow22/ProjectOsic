@@ -13,10 +13,7 @@ function OsicLeftMenu() {
           alt="ini logo"
           className="logo"
         />
-        <a href="/osic" className="navigation">
-          Home
-        </a>
-        <a href="/aboutus" className="navigation">
+        <a href="/aboutus" target="_blank" className="navigation">
           About Us
         </a>
       </div>
@@ -26,11 +23,13 @@ function OsicLeftMenu() {
           <BiSearchAlt />
         </div>
       </div>
-      <div className="containerMenu mr-0">
+      <div className="containerMenu container-fluid mr-0">
         <p className="menu">Menu</p>
         <ul>
-          <MdOutlinePlaylistAddCircle />
-          <p className="playlistMenu">Playlist</p>
+          <div className="bebas">
+            <MdOutlinePlaylistAddCircle />
+            <p className="playlistMenu">Playlist</p>
+          </div>
           <li>
             <Playlist />
           </li>

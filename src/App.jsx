@@ -1,13 +1,15 @@
 import Login from "./component/Login.jsx";
 import Osic from "./component/Osic.jsx";
+import AboutUs from "./component/AboutUs.jsx";
 import "./App.css";
-import { Route, Link, Routes } from "react-router-dom";
+import { Route, Link, Routes, Navigate } from "react-router-dom";
 import React, { useEffect } from "react";
 import { useStateProvider } from "./utilities/StateProvider.jsx";
 import { reducerCases } from "./utilities/constant.js";
 
 function App() {
   const [{ token }, dispatch] = useStateProvider();
+
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -19,13 +21,11 @@ function App() {
 
   return (
     <div>
-      {token ? <Osic /> : <Login />}
-      {/* 
-    <Routes>
-        <Route exact path="/" Component={Login}></Route>
-        <Route exact path="/osic" Component={Osic}></Route>
+      <Routes>
+        <Route path="/" element={token ? <Navigate to="/osic" /> : <Login />} />
+        <Route path="/osic" element={token ? <Osic /> : <Login />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-      */}
     </div>
   );
 }
