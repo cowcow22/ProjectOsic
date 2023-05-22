@@ -1,26 +1,23 @@
-import React, { useEffect } from "react";
-import axios from "axios";
-import { useStateProvider } from "../utilities/StateProvider";
-import { reducerCases } from "../utilities/constant";
+import React, { useEffect } from 'react';
+import axios from 'axios';
+import { useStateProvider } from '../utilities/StateProvider';
+import { reducerCases } from '../utilities/constant';
 
 function Playlist() {
   const [{ token, playlistsMusic }, dispatch] = useStateProvider();
   useEffect(() => {
     const playlistData = async () => {
-      const respond = await axios.get(
-        "https://api.spotify.com/v1/me/playlists",
-        {
-          headers: {
-            Authorization: "Bearer " + token,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const respond = await axios.get('https://api.spotify.com/v1/me/playlists', {
+        headers: {
+          Authorization: 'Bearer ' + token,
+          'Content-Type': 'application/json',
+        },
+      });
       const { items } = respond.data;
       const playlistsMusic = items.map(({ name, id }) => {
         return { name, id };
       });
-      console.log(playlistsMusic);
+      // console.log('PLAYLIST' + playlistsMusic);
       dispatch({ type: reducerCases.SET_PLAYLISTS, playlistsMusic });
     };
     playlistData();

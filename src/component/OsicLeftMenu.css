@@ -1,5 +1,6 @@
 /* Left Menu Start */
 .leftMenu {
+  max-width: 45%;
   width: 240px;
   height: 100%;
   min-height: 100vh;

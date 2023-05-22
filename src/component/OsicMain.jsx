@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
-// import axios from "axios";
-// import { useStateProvider } from "../utilities/StateProvider";
+import React, { useCallback, useEffect, useState } from 'react';
+import axios from 'axios';
+import { useStateProvider } from '../utilities/StateProvider';
 // import { AiFillClockCircle } from "react-icons/ai";
-// import { reducerCases } from "../utilities/constant";
-import "./OsicMain.css";
+import { reducerCases } from '../utilities/constant';
+import './OsicMain.css';
+import OsicMiddleBody from './OsicMiddleBody';
 
 function OsicMain() {
   // const [{ token, playlistSelect, playlistSelectId }, dispatch] =
@@ -46,8 +47,8 @@ function OsicMain() {
   // }, [token, dispatch, playlistSelectId]);
 
   return (
-    <div className="middleBody">
-      <h1>Osic Main</h1>
+    <div className="middleBody container">
+      <OsicMiddleBody />
     </div>
   );
 }

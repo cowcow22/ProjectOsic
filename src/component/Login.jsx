@@ -4,8 +4,8 @@ import "./Login.css";
 
 function Login() {
   const handleClick = async () => {
-    const clientId = "09b22affe3044deea517a4b139fb1391";
-    const redirectUrl = "http://localhost:3000/";
+    const clientId = "75d4b97589d04a3d8040cecf42913b92";
+    const redirectUrl = "http://localhost:3000";
     const apiUrl = "https://accounts.spotify.com/authorize";
     const scope = [
       "user-read-private",
